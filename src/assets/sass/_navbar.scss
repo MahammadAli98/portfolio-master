@@ -1,0 +1,76 @@
+#mainNav {
+  min-height: 56px;
+  background-color: $white;
+  .navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: #1e485b;
+    border: 1px solid #1e485b;
+    &:focus {
+      outline: none;
+    }
+  }
+  .navbar-brand {
+    color: #1e485b;
+    font-weight: 700;
+    padding: .9rem 0;
+  }
+  .navbar-nav {
+    .nav-item {
+      &:hover {
+        color: fade(white, 80%);
+        outline: none;
+        background-color: transparent;
+      }
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: transparent;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    .navbar-brand {
+      padding: .5rem 0;
+      color: fade-out(#1e485b, .5);
+    }
+    .nav-link {
+      transition: none;
+      padding: 2rem 1.5rem;
+      color: fade-out(#1e485b, 0);
+      &:hover {
+        color: fade-out($white, .25);
+      }
+      &:active {
+        color: white;
+      }
+    }
+    &.navbar-shrink {
+      background-color: $white;
+      .navbar-brand {
+        color: #1e485b;
+      }
+      .nav-link {
+        color: #1e485b;
+        padding: 1.5rem 1.5rem 1.25rem;
+        border-bottom: 0.25rem solid transparent;
+        &:hover {
+          color: #1e485b;
+        }
+        &:active {
+          color: darken(#1e485b, 15%);
+        }
+        &.active {
+          color: #1e485b;
+          outline: none;
+          border-bottom: 0.25rem solid #1e485b;
+        }
+      }
+    }
+  }
+}
